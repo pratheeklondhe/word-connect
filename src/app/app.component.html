@@ -1,8 +1,11 @@
 <ion-app>
   <ion-content>
-    <hello name="{{ name }}"></hello>
-    <p>Start editing to see some magic happen :)</p>
-
-    <ion-button>GREAT IONIC BUTTON</ion-button>
+    <div class="game-board">
+      <div *ngFor="let row of puzzle; let i = index" class="row">
+        <div *ngFor="let letter of row; let j = index" class="letter">
+          {{ letter }}
+        </div>
+      </div>
+    </div>
   </ion-content>
 </ion-app>
